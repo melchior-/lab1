@@ -88,4 +88,19 @@ email = "martin.pettersson@outlook.com"
 print(email.split("@")[0])
 print(email.split("@")[1])
 
+lang = "Java"
+print(lang)
+lang = "Python"
+print(lang)
 
+# Part D
+
+str = "Python is a powerful programming language."
+print(str[0:6])
+print(str[7:9])
+print(str[10:11])
+print(str[12:21])
+print(str[::-2])
+print(str[::-1])
+print(str[::-4])
+print(str[::2])
