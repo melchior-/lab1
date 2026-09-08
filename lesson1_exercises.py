@@ -6,4 +6,14 @@ name = "Martin Pettersson"
 height = 1.89
 student = True
 
+print(type(name))
+print(type(height))
+print(type(student))
 
+print(name)
+print(height)
+print(student)
+
+print(type(height))
+height = int(height)
+print(type(height))
