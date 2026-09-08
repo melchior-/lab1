@@ -104,3 +104,26 @@ print(str[::-2])
 print(str[::-1])
 print(str[::-4])
 print(str[::2])
+
+ai = "Artificial Intelligence"
+print(ai[0:10])
+print(ai[11:22])
+print(ai[::3])
+print(ai[::-1])
+print(ai[::-2])
+print(ai[::-3])
+
+# .split() method splits a string into a list of substrings 
+# based on a specified delimiter.
+# .strip() method removes leading and trailing whitespace from a string.
+# .replace() method replaces occurrences of a specified 
+# substring with another substring in a string.
+
+# We demonstrate string immutability:
+str = "Hello, World!"
+# Attempting to change the first character of the string
+# str[0] = "h"  # This will raise a TypeError because 
+# strings are immutable in Python.
+str = str.replace("H", "h") # This creates a new string with the desired change.
+
+# Part E
