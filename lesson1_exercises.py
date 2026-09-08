@@ -47,3 +47,7 @@ discount_amount = price_of_item * (discount_percentage / 100)
 final_price = price_of_item - discount_amount
 print(f"The discount amount is {discount_amount:.2f} and the final price is {final_price:.2f}.")
 
+celsius = float(input("Enter temperature in Celsius: "))
+fahrenheit = (celsius * 9/5) + 32
+print(f"The temperature in Fahrenheit is {fahrenheit:.2f}.")
+
