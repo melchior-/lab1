@@ -150,10 +150,10 @@ print(f"{hours:02d}:{minutes:02d}:{seconds:02d}")
 
 digits = 1234
 
-while number > 0:
-    digit = number % 10
+while digits > 0:
+    digit = digits % 10
     print(digit)
-    number //= 10
+    digits //= 10
 
 word = "Testing"
 number_of_stars = len(word)-4
