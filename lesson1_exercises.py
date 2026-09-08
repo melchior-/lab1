@@ -72,9 +72,16 @@ first_name = input("Enter your first name: ")
 last_name = input("Enter your last name: ")
 print(f"Hello, {first_name} {last_name}! Welcome to the program.")
 
+first_name_lower = first_name.lower().strip()
+last_name_lower = last_name.lower().strip()
+username = first_name_lower[0:3] + "." + last_name_lower[0:5]
+print(f"Your username is: {username}")
+
 str = "python programming"
 print(str[0])
 print(str[-1])
 print(str[0:6])
 print(str[11:])
 print(str[::-1])
+
+
