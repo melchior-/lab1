@@ -17,3 +17,18 @@ print(student)
 print(type(height))
 height = int(height)
 print(type(height))
+
+a = 53
+b = 12
+print(a + b)
+print(a - b)
+print(a * b)
+print(a / b)
+print(a // b)
+print(a % b)
+print(a ** b)
+
+# Three examples where explicit type conversion is necessary
+# 1. Converting a string to an integer for mathematical operations
+# 2. Converting a float to an integer to remove the decimal part
+# 3. Converting an integer to a string for concatenation with other strings
