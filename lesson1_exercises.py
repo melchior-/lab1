@@ -51,3 +51,12 @@ celsius = float(input("Enter temperature in Celsius: "))
 fahrenheit = (celsius * 9/5) + 32
 print(f"The temperature in Fahrenheit is {fahrenheit:.2f}.")
 
+length = float(input("Enter the length of the rectangle: "))
+width = float(input("Enter the width of the rectangle: "))
+area = length * width
+perimeter = 2 * (length + width)
+print(f"The area of the rectangle is {area:.2f} and the perimeter is {perimeter:.2f}.")
+
+# If you type "hello" in length, it will cause a ValueError 
+# because the input cannot be converted to a float.
+
