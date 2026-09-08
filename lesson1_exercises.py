@@ -139,3 +139,19 @@ year_of_birth = year_of_birth.strip()
 programming_language = programming_language.strip().capitalize()
 user_name = first_name[0:3].lower() + "." + last_name[0:5].lower() + "@" + year_of_birth + ".com"
 print(f"Hello, {first_name} {last_name} from {city}! You were born in {year_of_birth} and your favorite programming language is {programming_language}.")
+
+# Part F
+
+total_seconds = int(input("Enter the total number of seconds: "))
+hours = total_seconds // 3600
+minutes = (total_seconds % 3600) // 60
+seconds = total_seconds % 60
+print(f"{hours:02d}:{minutes:02d}:{seconds:02d}")
+
+digits = 1234
+
+while number > 0:
+    digit = number % 10
+    print(digit)
+    number //= 10
+
