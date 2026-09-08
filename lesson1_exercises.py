@@ -155,3 +155,12 @@ while number > 0:
     print(digit)
     number //= 10
 
+word = "Testing"
+number_of_stars = len(word)-4
+print(word[0:2] + "*" * number_of_stars + word[-2:])
+
+# Predict the output of the following code snippet:
+word = "Programming"
+print(word[0:3])  # Output: Pro
+print(word[3:6])  # Output: gra
+print(type(word[6:]))  # Output: <class 'str'>
