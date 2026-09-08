@@ -32,3 +32,11 @@ print(a ** b)
 # 1. Converting a string to an integer for mathematical operations
 # 2. Converting a float to an integer to remove the decimal part
 # 3. Converting an integer to a string for concatenation with other strings
+
+# Part B
+
+name = input("What is your name? ")
+year_of_birth = input("What year were you born? ")
+current_year = 2026
+age = current_year - int(year_of_birth)
+print(f"Hello, {name}! You are {age} years old.")
