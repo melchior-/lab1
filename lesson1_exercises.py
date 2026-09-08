@@ -127,3 +127,15 @@ str = "Hello, World!"
 str = str.replace("H", "h") # This creates a new string with the desired change.
 
 # Part E
+first_name = input("Enter your first name: ")
+last_name = input("Enter your last name: ")
+city = input("Enter your city: ")
+year_of_birth = input("Enter your year of birth: ")
+programming_language = input("Enter your favorite programming language: ")
+first_name = first_name.strip().capitalize()
+last_name = last_name.strip().capitalize()
+city = city.strip().capitalize()
+year_of_birth = year_of_birth.strip()
+programming_language = programming_language.strip().capitalize()
+user_name = first_name[0:3].lower() + "." + last_name[0:5].lower() + "@" + year_of_birth + ".com"
+print(f"Hello, {first_name} {last_name} from {city}! You were born in {year_of_birth} and your favorite programming language is {programming_language}.")
