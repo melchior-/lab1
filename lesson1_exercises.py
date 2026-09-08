@@ -60,3 +60,21 @@ print(f"The area of the rectangle is {area:.2f} and the perimeter is {perimeter:
 # If you type "hello" in length, it will cause a ValueError 
 # because the input cannot be converted to a float.
 
+# Part C
+
+full_sentence = "      Roses are red, violets are blue."
+print(len(full_sentence))
+print(full_sentence.upper())
+print(full_sentence.lower())
+print(full_sentence.strip())
+
+first_name = input("Enter your first name: ")
+last_name = input("Enter your last name: ")
+print(f"Hello, {first_name} {last_name}! Welcome to the program.")
+
+str = "python programming"
+print(str[0])
+print(str[-1])
+print(str[0:6])
+print(str[11:])
+print(str[::-1])
