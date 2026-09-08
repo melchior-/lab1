@@ -81,7 +81,11 @@ str = "python programming"
 print(str[0])
 print(str[-1])
 print(str[0:6])
-print(str[11:])
+print(str[len(str)-11:])
 print(str[::-1])
+
+email = "martin.pettersson@outlook.com"
+print(email.split("@")[0])
+print(email.split("@")[1])
 
 
