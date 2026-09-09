@@ -219,3 +219,20 @@ course_platform = {
                  "Charlie": {"age": 28, "city": "Chicago"}},
     "Topics": ["variables", "loops", "functions", "classes", "objects"]
 }
+
+inventory = {
+    "apples": {"quantity": 50, "price_per_unit": 0.5},
+    "bananas": {"quantity": 30, "price_per_unit": 0.3},
+    "oranges": {"quantity": 20, "price_per_unit": 0.4},
+    "grapes": {"quantity": 15, "price_per_unit": 0.6}
+}
+
+total_quantity = sum(item["quantity"] for item in inventory.values())
+total_value = sum(item["quantity"] * item["price_per_unit"] for item in inventory.values())
+inventory["bananas"]["quantity"] += 10
+
+# Comparison of list, tuples, sets, and dictionaries
+# Lists are ordered, mutable, and allow duplicate elements.
+# Tuples are ordered, immutable, and allow duplicate elements.
+# Sets are unordered, mutable, and do not allow duplicate elements.
+# Dictionaries are unordered, mutable, and store key-value pairs.
