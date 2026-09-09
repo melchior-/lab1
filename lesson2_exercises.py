@@ -123,3 +123,6 @@ list_of_dicts = [
 title_third_book = list_of_dicts[2]["title"]
 available_last_book = list_of_dicts[-1]["available"]
 
+list_of_dicts[1].update({"color": "blue"})
+list_of_dicts[3]["available"] = False
+
