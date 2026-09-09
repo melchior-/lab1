@@ -19,13 +19,15 @@ print(languages)
 
 nums = [10, 20, 30, 40, 50]
 length = len(nums)
-min = min(nums)
-max = max(nums)
-sum = sum(nums)
+min_ = min(nums)
+max_ = max(nums)
+sum_ = sum(nums)
 
 nums1 = [432,532,234,52,1,2,3,4,5,6,7,8,9]
-nums1 = nums1.sort()
-nums1 = sorted(nums1, reverse=True)
+nums2 = sorted(nums1, reverse=True)
+nums1.sort()
+print(nums1)
+print(nums2)
 
 list_a = [1, 2, 3]
 list_b = [4, 5, 6]
@@ -72,4 +74,39 @@ skills1.remove("building")
 includes = "maths" in skills1
 
 print(f"Shared skills: {shared_skills}")
+
+# Sometimes a set is a better choice than a list because it is faster
+# to check if an item is in a set than in a list.
+
+# Part D, Dictionaries
+
+laptop = {
+    "brand": "Dell",
+    "model": "XPS 13",
+    "year": 2022,
+    "specs": {
+        "CPU": "Intel Core i7",
+        "RAM": "16GB",
+        "Storage": "512GB SSD"
+    },
+    "price": 1499.99
+}
+
+laptop["price"] = 1399.99
+laptop.update({"operating_system": "Windows 11"})
+
+os = laptop.get("operating_system")
+shiny = laptop.get("shiny", "Not found")
+
+for item in laptop.items():
+    print(f"{item[0]}: {item[1]}")
+
+courses = {
+    "Python": 3.9,
+    "Java": 15,
+    "C++": 11
+}
+
+total_hours = sum(courses.values())
+
 
