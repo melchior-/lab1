@@ -17,3 +17,9 @@ print(languages)
 languages.pop(4)
 print(languages)
 
+nums = [10, 20, 30, 40, 50]
+length = len(nums)
+min = min(nums)
+max = max(nums)
+sum = sum(nums)
+
