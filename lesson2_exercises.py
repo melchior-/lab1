@@ -46,4 +46,13 @@ person = ("Martin", "Stockholm", 35)
 name, city, age = person
 print(f"Name: {name}, City: {city}, Age: {age}")
 
+# We cannot change the values of a tuple, but we can create a 
+# new tuple with the desired values.
+# This is useful when we want to update the values of a 
+# tuple without changing the original tuple.
+
+list_of_tuples = [("Python", 3.9), ("Java", 15), ("C++", 11)]
+for tuple in list_of_tuples:
+    language, version = tuple
+    print(f"Language: {language}, Version: {version}")
 
