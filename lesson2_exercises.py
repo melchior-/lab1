@@ -56,3 +56,10 @@ for tuple in list_of_tuples:
     language, version = tuple
     print(f"Language: {language}, Version: {version}")
 
+# Part C, Sets
+
+list_of_courses = ["Python", "Java", "C++", "Python", "JavaScript", "Java"]
+set_of_courses = set(list_of_courses)
+print(len(list_of_courses))
+print(len(set_of_courses))
+
