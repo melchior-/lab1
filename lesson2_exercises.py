@@ -198,3 +198,15 @@ print(f"Total movies in collection: {len(movies)}")
 # All movie titles in the collection:
 all_titles = [movie["title"] for movie in movies]
 print(f"All movie titles in the collection: {all_titles}")
+
+# Part G, Challenges
+
+usernames1 = ["alice", "bob", "charlie", "david", "eve"]
+usernames2 = ["bob", "grace", "eve", "ivan", "judy"]
+
+duplicate_usernames = set(usernames1).intersection(set(usernames2))
+print(f"Duplicate usernames: {duplicate_usernames}")
+
+unique_usernames = set(usernames1).union(set(usernames2))
+print(f"Unique usernames: {unique_usernames}")
+
