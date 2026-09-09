@@ -63,3 +63,7 @@ set_of_courses = set(list_of_courses)
 print(len(list_of_courses))
 print(len(set_of_courses))
 
+skills1 = {"coding", "music", "maths", "machine learning", "building"}
+skills2 = {"coding", "working", "music"}
+shared_skills = skills1.intersection(skills2)
+
