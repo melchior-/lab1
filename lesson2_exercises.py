@@ -119,3 +119,7 @@ list_of_dicts = [
     {"title": "JavaScript Essentials", "author": "Alice Brown", "pages": 150, "available": True},
     {"title": "Ruby on Rails", "author": "Charlie Davis", "pages": 400, "available": False}
 ]
+
+title_third_book = list_of_dicts[2]["title"]
+available_last_book = list_of_dicts[-1]["available"]
+
