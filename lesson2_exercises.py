@@ -132,3 +132,13 @@ departments = {
     "Finance": ["Grace", "Hannah", "Ian"]
 }
 
+courses = {
+    "Python": {"instructor": "John Doe", "duration": 10, 
+               "topics": ["variables", "loops", "functions"]},
+    "Java": {"instructor": "Jane Smith", "duration": 15, 
+             "topics": ["classes", "objects", "inheritance"]},
+    "C++": {"instructor": "Bob Johnson", "duration": 12, 
+            "topics": ["pointers", "memory management", "templates"]}
+}
+
+print(f"Topic of Python course: {courses['Python']['topics'][0]}")
