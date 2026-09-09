@@ -23,3 +23,7 @@ min = min(nums)
 max = max(nums)
 sum = sum(nums)
 
+nums1 = [432,532,234,52,1,2,3,4,5,6,7,8,9]
+nums1 = nums1.sort()
+nums1 = sorted(nums1, reverse=True)
+
