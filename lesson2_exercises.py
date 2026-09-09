@@ -42,5 +42,8 @@ green = rgb[1]
 blue = rgb[2]
 print(f"Red: {red}, Green: {green}, Blue: {blue}")
 
+person = ("Martin", "Stockholm", 35)
+name, city, age = person
+print(f"Name: {name}, City: {city}, Age: {age}")
 
 
