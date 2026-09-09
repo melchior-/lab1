@@ -27,3 +27,10 @@ nums1 = [432,532,234,52,1,2,3,4,5,6,7,8,9]
 nums1 = nums1.sort()
 nums1 = sorted(nums1, reverse=True)
 
+list_a = [1, 2, 3]
+list_b = [4, 5, 6]
+list_a = list_b
+# We need to use .copy to create a new list that is a copy of list_b, 
+# so that changes to list_a do not affect list_b.
+list_c = list_b.copy()
+
