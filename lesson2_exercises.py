@@ -142,3 +142,59 @@ courses = {
 }
 
 print(f"Topic of Python course: {courses['Python']['topics'][0]}")
+
+# Part F, Personal Media Catalogue
+
+movies = [
+    {"title": "Inception", "director": "Christopher Nolan", 
+     "year": 2010, "genre": "Sci-Fi", "rating": 8.8},
+    {"title": "The Dark Knight", "director": "Christopher Nolan", 
+     "year": 2008, "genre": "Action", "rating": 9.0},
+    {"title": "Interstellar", "director": "Christopher Nolan", 
+     "year": 2014, "genre": "Sci-Fi", "rating": 8.6},
+    {"title": "The Matrix", "director": "Lana Wachowski, Lilly Wachowski", 
+     "year": 1999, "genre": "Sci-Fi", "rating": 8.7},
+     {"title": "The Godfather", "director": "Francis Ford Coppola", 
+      "year": 1972, "genre": "Crime", "rating": 9.2},
+    {"title": "Pulp Fiction", "director": "Quentin Tarantino", 
+     "year": 1994, "genre": "Crime", "rating": 8.9},
+    {"title": "The Shawshank Redemption", "director": "Frank Darabont", 
+     "year": 1994, "genre": "Drama", "rating": 9.3},
+    {"title": "The Lord of the Rings: The Return of the King", "director": "Peter Jackson", 
+     "year": 2003, "genre": "Fantasy", "rating": 8.9},
+    {"title": "Forrest Gump", "director": "Robert Zemeckis", 
+     "year": 1994, "genre": "Drama", "rating": 8.8},
+    {"title": "Fight Club", "director": "David Fincher", 
+     "year": 1999, "genre": "Drama", "rating": 8.8}
+]
+
+set_of_genres = set()
+for movie in movies:
+    set_of_genres.add(movie["genre"])
+
+print(f"Unique genres in the movie collection: {set_of_genres}")
+
+tuple_title_and_year = [(movie["title"], movie["year"]) for movie in movies]
+print(f"Title and year of each movie: {tuple_title_and_year}")
+
+genres = [movie["genre"] for movie in movies]
+years = [movie["year"] for movie in movies]
+titles = [movie["title"] for movie in movies]
+ratings = [movie["rating"] for movie in movies]
+directors = [movie["director"] for movie in movies]
+movies[0]["rating"] = 9.0
+print(f"Updated rating for {movies[0]['title']}: {movies[0]['rating']}")
+movies[1]["director"] = "Nolan"
+print(f"Updated director for {movies[1]['title']}: {movies[1]['director']}")
+movies[2]["year"] = 2015
+print(f"Updated year for {movies[2]['title']}: {movies[2]['year']}")
+movies[3]["genre"] = "Action"
+print(f"Updated genre for {movies[3]['title']}: {movies[3]['genre']}")
+movies[4]["title"] = "The Godfather Part I"
+print(f"Updated title for movie 5: {movies[4]['title']}")
+
+# Summary of catalogue:
+print(f"Total movies in collection: {len(movies)}")
+# All movie titles in the collection:
+all_titles = [movie["title"] for movie in movies]
+print(f"All movie titles in the collection: {all_titles}")
