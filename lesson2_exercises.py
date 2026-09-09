@@ -67,3 +67,9 @@ skills1 = {"coding", "music", "maths", "machine learning", "building"}
 skills2 = {"coding", "working", "music"}
 shared_skills = skills1.intersection(skills2)
 
+skills2.add("maths")
+skills1.remove("building")
+includes = "maths" in skills1
+
+print(f"Shared skills: {shared_skills}")
+
