@@ -210,3 +210,12 @@ print(f"Duplicate usernames: {duplicate_usernames}")
 unique_usernames = set(usernames1).union(set(usernames2))
 print(f"Unique usernames: {unique_usernames}")
 
+course_platform = {
+    "Python": {"instructor": "John Doe", "duration": 10, "students": 100},
+    "JavaScript": {"instructor": "Jane Smith", "duration": 8, "students": 80},
+    "Java": {"instructor": "Bob Johnson", "duration": 12, "students": 120},
+    "Students": {"Alice": {"age": 25, "city": "New York"},
+                 "Bob": {"age": 30, "city": "Los Angeles"},
+                 "Charlie": {"age": 28, "city": "Chicago"}},
+    "Topics": ["variables", "loops", "functions", "classes", "objects"]
+}
