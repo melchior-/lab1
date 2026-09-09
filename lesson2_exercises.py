@@ -34,3 +34,13 @@ list_a = list_b
 # so that changes to list_a do not affect list_b.
 list_c = list_b.copy()
 
+# Part B, Tuples and Unpacking
+
+rgb = (255, 0, 0)
+red = rgb[0]
+green = rgb[1]
+blue = rgb[2]
+print(f"Red: {red}, Green: {green}, Blue: {blue}")
+
+
+
