@@ -1,4 +1,5 @@
-languages = ["Python", "JavaScript", "C++", "Java", "Ruby", "Go", "Swift", "Kotlin", "PHP", "TypeScript"]
+languages = ["Python", "JavaScript", "C++", "Java", "Ruby", "Go", 
+             "Swift", "Kotlin", "PHP", "TypeScript"]
 first_language = languages[0]
 last_language = languages[-1]
 third_language = languages[2]
@@ -109,4 +110,12 @@ courses = {
 
 total_hours = sum(courses.values())
 
+# Part E, Nested collections
 
+list_of_dicts = [
+    {"title": "Python Basics", "author": "John Doe", "pages": 250, "available": True},
+    {"title": "Java Programming", "author": "Jane Smith", "pages": 300, "available": False},
+    {"title": "C++ Fundamentals", "author": "Bob Johnson", "pages": 200, "available": True},
+    {"title": "JavaScript Essentials", "author": "Alice Brown", "pages": 150, "available": True},
+    {"title": "Ruby on Rails", "author": "Charlie Davis", "pages": 400, "available": False}
+]
