@@ -77,7 +77,16 @@ languages = ["Java", "C++", "Python"]
 if "Java" in languages:
     print("Java is a language in the list.")
 
+blocked_usernames = ["greg", "greta", "hans"]
+if "greg" in blocked_usernames:
+    print("greg is a blocked username")
 
+roses_are_red = False
+violets_are_blue = False
 
+if not roses_are_red and not violets_are_blue:
+    print("The garden will print.")
+
+# Part C
 
 
