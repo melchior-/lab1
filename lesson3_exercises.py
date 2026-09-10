@@ -1,3 +1,5 @@
+# Part A
+
 num = float(input("Enter a number: "))
 if num > 0:
     print("Positive number")
@@ -108,3 +110,49 @@ for number in numbers:
     sum += number
 print(sum)
 
+maximum = numbers[0]
+
+for number in numbers:
+    if number >= maximum:
+        maximum = number
+
+print(f"{maximum} is the maximum value in the list.")
+
+words = ["roses", "are", "red", "violets", "are", "blue"]
+
+count = 0
+for word in words:
+    if len(word) > 5:
+        count += 1
+
+print(f"{count} words have more than 5 characters.")
+
+scores = [90, 23, 43, 67, 89]
+
+count = 0
+threshold = 75
+for score in scores:
+    if score >= threshold:
+        count += 1
+print(f"{count} students passed.")
+
+# Example dictionary
+student = {
+    "name": "Martin",
+    "age": 20,
+    "city": "Stockholm"
+}
+
+# 1. Loop over keys
+for key in student:
+    print(key)
+
+# 2. Loop over values
+for value in student.values():
+    print(value)
+
+# 3. Loop over key-value pairs
+for key, value in student.items():
+    print(key, value)
+
+# Part D
