@@ -58,3 +58,26 @@ if a >= b:
 if a <= b:
     print(f"{a} is less than or equal to {b}")
 
+# Part B
+
+if "":
+    print("This will not print because the string is empty.")
+if "Hello":
+    print("This will print because the string is not empty.")
+if 0:
+    print("This will not print because 0 is considered False.")
+if 3:
+    print("This will print because 3 is considered True")
+if []:
+    print("Will not print.")
+if [1,2,3]:
+    print("This will print.")
+
+languages = ["Java", "C++", "Python"]
+if "Java" in languages:
+    print("Java is a language in the list.")
+
+
+
+
+
