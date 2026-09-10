@@ -16,3 +16,10 @@ if age.isdigit():
     else:
         print("You are a senior citizen.")
 
+username = "martin"
+password = "password123"
+input_username = input("Enter your username: ")
+input_password = input("Enter your password: ")
+if input_username == username and input_password == password:
+    print("Login successful!")
+
