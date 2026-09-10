@@ -35,3 +35,26 @@ elif score >= 60:
 else:
     print("Grade: F")
 
+member = True
+order_total = 120
+
+if member and order_total > 100:
+    discount = 0.1
+    print(f"Discount applied: {discount * 100}%")
+
+a = 5
+b = 3
+
+if a > b:
+    print(f"{a} is greater than {b}")
+if a < b:
+    print(f"{a} is less than {b}")
+if a == b:
+    print(f"{a} is equal to {b}")
+if a != b:
+    print(f"{a} is not equal to {b}")
+if a >= b:
+    print(f"{a} is greater than or equal to {b}")
+if a <= b:
+    print(f"{a} is less than or equal to {b}")
+
