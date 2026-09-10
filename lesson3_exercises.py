@@ -89,4 +89,14 @@ if not roses_are_red and not violets_are_blue:
 
 # Part C
 
+names = ["alice", "bob", "charles"]
+
+i = 1
+for name in names:
+    print(f"Hello {name} {i}")
+    i += 1
+
+for number in range(50):
+    if (number % 2 == 0):
+        print(number)
 
