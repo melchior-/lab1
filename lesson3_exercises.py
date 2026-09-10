@@ -96,7 +96,15 @@ for name in names:
     print(f"Hello {name} {i}")
     i += 1
 
-for number in range(50):
+for number in range(1, 51):
     if (number % 2 == 0):
         print(number)
+
+numbers = [123,532,523,2,5,2,243,24,45,6]
+
+sum = 0
+
+for number in numbers:
+    sum += number
+print(sum)
 
