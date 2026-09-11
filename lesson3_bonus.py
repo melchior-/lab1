@@ -91,6 +91,38 @@ def print_all_gates():
         for number in numbers:
             print(f"Gate {letter}{number}")
 
+def interactive_menu(departures):
+    quit = False
+    while not quit:
+        print("")
+        print("1. View all flights")
+        print("2. View delayed flights")
+        print("3. View cancelled flights")
+        print("4. Search for a flight")
+        print("5. View flight statistics")
+        print("6. Quit")
+        print("")
+        user_input = int(input("Choose an option: "))
+        print("")
+
+        if user_input == 1:
+            print_departure_board(departures)
+        elif user_input == 2:
+            for departure in departures:
+                if departure["delay_in_minutes"] > 0 and not departure["cancelled"]:
+                    print(f"{departure["flight_number"]} - {departure["destination"]} - {departure["gate"]}")
+        elif user_input == 3:
+            for departure in departures:
+                if departure["cancelled"]:
+                    print(f"{departure["flight_number"]} - {departure["destination"]} - {departure["gate"]}")
+        elif user_input == 4:
+            search_for_flight(departures)
+        elif user_input == 5:
+            print_flight_analysis(departures)
+        elif user_input == 6:
+            quit = True
+        else:
+            continue
 
 
 departures = create_departure_data()
@@ -103,3 +135,5 @@ print("")
 search_for_flight(departures)
 print("")
 print_all_gates()
+print("")
+interactive_menu(departures)
