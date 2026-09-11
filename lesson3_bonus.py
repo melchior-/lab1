@@ -5,7 +5,7 @@ def create_departure_data():
                           {"flight_number" : "AS423", "destination" : "Stockholm", "departure_time" : "17:00", "gate" : "B67", "passengers" : 321, "maximum_capacity" : 400, "delay_in_minutes" : 0, "cancelled" : False},
                           {"flight_number" : "AS414", "destination" : "Helsinki", "departure_time" : "17:30", "gate" : "D10", "passengers" : 421, "maximum_capacity" : 500, "delay_in_minutes" : 0, "cancelled" : False},
                           {"flight_number" : "AS513", "destination" : "Dubai", "departure_time" : "22:00", "gate" : "C33", "passengers" : 111, "maximum_capacity" : 130, "delay_in_minutes" : 0, "cancelled" : False},
-                          {"flight_number" : "AS525", "destination" : "Barcelona", "departure_time" : "21:00", "gate" : "B20", "passengers" : 321, "maximum_capacity" : 350, "delay_in_minutes" : 7, "cancelled" : True},
+                          {"flight_number" : "AS525", "destination" : "Barcelona", "departure_time" : "21:00", "gate" : "B20", "passengers" : 321, "maximum_capacity" : 350, "delay_in_minutes" : 67, "cancelled" : True},
                           {"flight_number" : "BX421", "destination" : "Amsterdam", "departure_time" : "20:45", "gate" : "E14", "passengers" : 153, "maximum_capacity" : 200, "delay_in_minutes" : 50, "cancelled" : False},
                           {"flight_number" : "BX313", "destination" : "New York", "departure_time" : "14:00", "gate" : "D66", "passengers" : 175, "maximum_capacity" : 210, "delay_in_minutes" : 0, "cancelled" : False},
                           {"flight_number" : "BR555", "destination" : "San Fransisco", "departure_time" : "12:30", "gate" : "A67", "passengers" : 56, "maximum_capacity" : 70, "delay_in_minutes" : 0, "cancelled" : True}]
@@ -15,6 +15,20 @@ def print_departure_board(departures):
     for departure in departures:
         print(f"{departure["flight_number"]} - {departure["destination"]} - {departure["departure_time"]} - Gate {departure["gate"]}")
 
+def print_flight_status(departures):
+    for departure in departures:
+        status = "ON TIME"
+        delay = departure["delay_in_minutes"]
+        if delay >= 60:
+            status = "SEVERELY DELAYED"
+        elif delay >= 20 and delay <= 59:
+            status = "DELAYED"
+        elif delay >= 1 and delay <= 19:
+            status = "SLIGHT DELAY"
+        print(f"{departure["flight_number"]} - {departure["destination"]} - {status}")
+
 
 departures = create_departure_data()
 print_departure_board(departures)
+print("")
+print_flight_status(departures)
