@@ -13,7 +13,7 @@ def create_departure_data():
 
 def print_departure_board(departures):
     for departure in departures:
-        print(f"{departure["flight_number"]} - {departure["destination"]} - {departure["departure_time"]} - {departure["gate"]}")
+        print(f"{departure["flight_number"]} - {departure["destination"]} - {departure["departure_time"]} - Gate {departure["gate"]}")
 
 
 departures = create_departure_data()
