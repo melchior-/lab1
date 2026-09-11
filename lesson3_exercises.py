@@ -156,3 +156,207 @@ for key, value in student.items():
     print(key, value)
 
 # Part D
+
+# Fix: Use range to print 10 down to 1
+for i in range(1, 10, -1):
+    print(i)
+
+number = input("Enter number for multiplication table: ")
+number = int(number)
+print(f"You entered {number}")
+
+result = 0
+for i in range(1, 11):
+    result = i * number
+    print(result)
+
+# Fix: Use enumerate to print a playlist with track numbers starting at 1
+
+for x in range(4):
+    for y in range(5):
+        print(f"({x}, {y})")
+
+# Fix: Create a simple 5*5 text grid using nested loops
+
+# Part E, While loops
+
+countdown = 10
+while countdown >= 0:
+    print(countdown)
+    countdown -= 1
+
+correct_password = "pass"
+password = ""
+while password != correct_password:
+    password = input("Enter a password: ")
+
+quit = False
+
+while not quit:
+    print("1. Spaghetti Carbonara")
+    print("2. Pizza Margherita")
+    print("3. Meatballs")
+    print("4. Quit")
+    choice = input("Enter choice: ")
+    choice = int(choice)
+    if choice == 1:
+        print("Carbonara")
+    elif choice == 2:
+        print("Margherita")
+    elif choice == 3:
+        print("Meatballs")
+    elif choice == 4:
+        print("Good bye")
+        quit = True
+    else:
+        continue
+
+input_number = 1
+total = 0
+while input_number != 0:
+    input_number = int(input("Enter a number: "))
+    total += input_number
+    print(f"Total: {total}")
+
+secret_number = 67
+guess = 0
+while guess != secret_number:
+    guess = int(input("Guess a number: "))
+    if guess > secret_number:
+        print("Too high.")
+    else:
+        print("Too low")
+print("Correct!")
+
+for i in range(1, 101):
+    if i % 7 == 0 and i % 9 == 0:
+        print(i)
+        break
+
+strings = ["lol", "", "avada", "kedavra", "sixseven", "", "Java"]
+for str in strings:
+    if str == "":
+        continue
+    else:
+        print(str)
+
+target = "sixseven"
+for str in strings:
+    if str == target:
+        print("Found")
+        break
+
+numbers = [-23,32,532,62,-32124,432,999]
+for num in numbers:
+    if num < 0:
+        continue
+    elif num == 999:
+        break
+
+# Part G, Console study tracker
+
+courses = [{"subject" : "Java", "minutes" : 56}, {"subject" : "Python", "minutes" : 34}, {"subject" : "C++", "minutes" : 234}]
+
+total_minutes = 0
+for course in courses:
+    total_minutes += course["minutes"]
+print(total_minutes)
+
+courses = []
+total_minutes = 0
+while(True):
+    subject = input("Enter subject: ")
+    minutes = int(input("Enter minutes: "))
+    dict = {"subject" : subject, "minutes" : minutes}
+    courses.append(dict)
+    for course in courses:
+        total_minutes += course["minutes"]
+    print(f"Total minutes: {total_minutes}")
+    exit = input("Exit? ")
+    if exit == "y":
+        break
+
+courses = [{"subject" : "Java", "minutes" : 56}, 
+           {"subject" : "Python", "minutes" : 34}, 
+           {"subject" : "C++", "minutes" : 234},
+           {"subject" : "Assembly", "minutes" : 56}, 
+           {"subject" : "Rust", "minutes" : 34}, 
+           {"subject" : "C", "minutes" : 234},
+           {"subject" : "Perl", "minutes" : 56}, 
+           {"subject" : "Ruby", "minutes" : 34}, 
+           {"subject" : "JavaScript", "minutes" : 234}
+           ]
+longest_minutes = courses[0]["minutes"]
+
+for course in courses:
+    if course["minutes"] > longest_minutes:
+        longest_minutes = course["minutes"]
+
+print(f"Longest course: {longest_minutes}")
+
+for course in courses:
+    if course["minutes"] > 45:
+        print(course["subject"])
+
+while(True):
+    print("1. View all sessions")
+    print("2. View total time")
+    print("3. Filter by subject")
+    print("4. Quit")
+    choice = int(input(">>> "))
+    if choice == 1:
+        for course in courses:
+            print(course["subject"])
+    elif choice == 2:
+        total = 0
+        for course in courses:
+            total += course["minutes"]
+        print(f"Total time: {total}")
+    elif choice == 3:
+        subject = input("Enter subject: ")
+        filter = []
+        for course in courses:
+            if course["subject"] == subject:
+                filter.append(course)
+        for course in filter:
+            print(course)
+    elif choice == 4:
+        break
+    else:
+        continue
+
+# Part H, Stretch challenges
+
+for i in range(101):
+    if i % 3 == 0 and i % 5 == 0:
+        print(f"FizzBuzz: {i}")
+    elif i % 3 == 0:
+        print(f"Fizz: {i}")
+    elif i % 5 == 0:
+        print(f"Buzz: {i}")
+    else:
+        continue
+
+vowels = ["a", "i", "u", "e", "o"]
+sentence = "Roses are red, violets are blue"
+
+count = 0
+for char in sentence:
+    if char in vowels:
+        count += 1
+print(f"Vowels: {count}")
+
+nums = [234,43,5,33,2,2,2,2,4324,64,234,2]
+dict = {}
+for num in nums:
+    if num in dict:
+        dict[num] += 1
+    else:
+        dict[num] = 1
+print(dict)
+
+nums = [3, 5, 2]
+
+for num in nums:
+    print("*"*num)
+
