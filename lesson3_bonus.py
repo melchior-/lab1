@@ -41,12 +41,14 @@ def print_flight_analysis(departures):
     capacity_80 = 0
     busiest_flight = None
     flights_above_80 = []
+    total_delay = 0
 
     for departure in departures:
         if departure["cancelled"]:
             cancelled_flights += 1
         if departure["delay_in_minutes"] > 0:
             delayed_flights += 1
+            total_delay += departure["delay_in_minutes"]
         if departure["delay_in_minutes"] == 0 and not departure["cancelled"]:
             on_time += 1
         total_passengers += departure["passengers"]
@@ -58,6 +60,7 @@ def print_flight_analysis(departures):
             flights_above_80.append(departure)
 
     average_number_of_passengers = int(total_passengers / number_of_scheduled_flights)
+    average_delay = int(total_delay / number_of_scheduled_flights)
 
     print(f"Number of scheduled flights {number_of_scheduled_flights}")
     print(f"Cancelled flights: {cancelled_flights}")
@@ -85,6 +88,8 @@ def print_flight_analysis(departures):
     print("Flights above 80% capacity:")
     for flight in flights_above_80:
         print(f"{flight["flight_number"]} - {flight["destination"]}")
+    print("")
+    print(f"Average delay: {average_delay}")
 
 
 def search_for_flight(departures):
