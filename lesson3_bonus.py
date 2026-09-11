@@ -83,6 +83,15 @@ def search_for_flight(departures):
     if not found:
         print("Flight not found.")
 
+def print_all_gates():
+    letters = ["A", "B", "C"]
+    numbers = [1, 2, 3, 4]
+
+    for letter in letters:
+        for number in numbers:
+            print(f"Gate {letter}{number}")
+
+
 
 departures = create_departure_data()
 print_departure_board(departures)
@@ -92,3 +101,5 @@ print("")
 print_flight_analysis(departures)
 print("")
 search_for_flight(departures)
+print("")
+print_all_gates()
