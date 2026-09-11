@@ -19,12 +19,15 @@ def print_flight_status(departures):
     for departure in departures:
         status = "ON TIME"
         delay = departure["delay_in_minutes"]
+        cancelled = departure["cancelled"]
         if delay >= 60:
             status = "SEVERELY DELAYED"
         elif delay >= 20 and delay <= 59:
             status = "DELAYED"
         elif delay >= 1 and delay <= 19:
             status = "SLIGHT DELAY"
+        elif cancelled:
+            status = "CANCELLED"
         print(f"{departure["flight_number"]} - {departure["destination"]} - {status}")
 
 
