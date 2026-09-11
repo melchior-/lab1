@@ -63,6 +63,25 @@ def print_flight_analysis(departures):
     print(f"Flight with the largest number of passengers: {largest_flight}")
     print(f"Number of flights with more than 80% of capacity filled: {capacity_80}")
 
+def search_for_flight(departures):
+    flight = input("Enter flight number: ")
+    found = False
+    while not found:
+        for departure in departures:
+            if flight == departure["flight_number"]:
+                status = "ON TIME"
+                if departure["cancelled"]:
+                    status = "CANCELLED"
+                print(f"Destination: {departure["destination"]}")
+                print(f"Departure: {departure["departure_time"]}")
+                print(f"Gate: {departure["gate"]}")
+                print(f"Passengers: {departure["passengers"]}")
+                print(f"Status: {status}")
+                found = True
+        break
+    if not found:
+        print("Flight not found.")
+
 
 departures = create_departure_data()
 print_departure_board(departures)
@@ -70,3 +89,5 @@ print("")
 print_flight_status(departures)
 print("")
 print_flight_analysis(departures)
+print("")
+search_for_flight(departures)
