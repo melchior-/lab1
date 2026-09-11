@@ -158,7 +158,7 @@ for key, value in student.items():
 # Part D
 
 # Fix: Use range to print 10 down to 1
-for i in range(1, 10, -1):
+for i in range(10, 0, -1):
     print(i)
 
 number = input("Enter number for multiplication table: ")
@@ -170,13 +170,19 @@ for i in range(1, 11):
     result = i * number
     print(result)
 
-# Fix: Use enumerate to print a playlist with track numbers starting at 1
+playlist = ["Song A", "Song B", "Song C", "Song D"]
+
+for track_number, song in enumerate(playlist, start=1):
+    print(f"{track_number}. {song}")
 
 for x in range(4):
     for y in range(5):
         print(f"({x}, {y})")
 
-# Fix: Create a simple 5*5 text grid using nested loops
+for row in range(5):
+    for col in range(5):
+        print("#", end=" ")
+    print()
 
 # Part E, While loops
 
