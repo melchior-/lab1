@@ -39,6 +39,8 @@ def print_flight_analysis(departures):
     total_passengers = 0
     largest_flight = 0
     capacity_80 = 0
+    busiest_flight = None
+    flights_above_80 = []
 
     for departure in departures:
         if departure["cancelled"]:
@@ -50,8 +52,10 @@ def print_flight_analysis(departures):
         total_passengers += departure["passengers"]
         if departure["passengers"] > largest_flight:
             largest_flight = departure["passengers"]
+            busiest_flight = departure
         if departure["passengers"] / departure["maximum_capacity"] > 0.8:
             capacity_80 += 1
+            flights_above_80.append(departure)
 
     average_number_of_passengers = int(total_passengers / number_of_scheduled_flights)
 
@@ -63,6 +67,25 @@ def print_flight_analysis(departures):
     print(f"Average numbers of passengers: {average_number_of_passengers}")
     print(f"Flight with the largest number of passengers: {largest_flight}")
     print(f"Number of flights with more than 80% of capacity filled: {capacity_80}")
+    print("")
+
+    print("-------------------")
+    print("")
+    print("AIRPORT OPERATIONS REPORT")
+    print("")
+    print(f"Scheduled flights: {number_of_scheduled_flights}")
+    print(f"Cancelled flights: {cancelled_flights}")
+    print(f"Delayed flights: {delayed_flights}")
+    print("")
+    print(f"Passengers today: {total_passengers}")
+    print("")
+    print(f"Busiest flight: ")
+    print(f"{busiest_flight["flight_number"]} - {busiest_flight["destination"]} - {busiest_flight["passengers"]} passengers")
+    print("")
+    print("Flights above 80% capacity:")
+    for flight in flights_above_80:
+        print(f"{flight["flight_number"]} - {flight["destination"]}")
+
 
 def search_for_flight(departures):
     flight = input("Enter flight number: ")
