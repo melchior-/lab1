@@ -11,4 +11,10 @@ def create_departure_data():
                           {"flight_number" : "BR555", "destination" : "San Fransisco", "departure_time" : "12:30", "gate" : "A67", "passengers" : 56, "maximum_capacity" : 70, "delay_in_minutes" : 0, "cancelled" : True}]
     return list_of_departures
 
-create_departure_data()
+def print_departure_board(departures):
+    for departure in departures:
+        print(f"{departure["flight_number"]} - {departure["destination"]} - {departure["departure_time"]} - {departure["gate"]}")
+
+
+departures = create_departure_data()
+print_departure_board(departures)
