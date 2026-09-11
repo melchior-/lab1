@@ -30,8 +30,43 @@ def print_flight_status(departures):
             status = "CANCELLED"
         print(f"{departure["flight_number"]} - {departure["destination"]} - {status}")
 
+def print_flight_analysis(departures):
+    number_of_scheduled_flights = len(departures)
+    cancelled_flights = 0
+    delayed_flights = 0
+    on_time = 0
+    total_passengers = 0
+    largest_flight = 0
+    capacity_80 = 0
+
+    for departure in departures:
+        if departure["cancelled"]:
+            cancelled_flights += 1
+        if departure["delay_in_minutes"] > 0:
+            delayed_flights += 1
+        if departure["delay_in_minutes"] == 0 and not departure["cancelled"]:
+            on_time += 1
+        total_passengers += departure["passengers"]
+        if departure["passengers"] > largest_flight:
+            largest_flight = departure["passengers"]
+        if departure["passengers"] / departure["maximum_capacity"] > 0.8:
+            capacity_80 += 1
+
+    average_number_of_passengers = int(total_passengers / number_of_scheduled_flights)
+
+    print(f"Number of scheduled flights {number_of_scheduled_flights}")
+    print(f"Cancelled flights: {cancelled_flights}")
+    print(f"Delayed flights: {delayed_flights}")
+    print(f"Flights on time: {on_time}")
+    print(f"Total passengers: {total_passengers}")
+    print(f"Average numbers of passengers: {average_number_of_passengers}")
+    print(f"Flight with the largest number of passengers: {largest_flight}")
+    print(f"Number of flights with more than 80% of capacity filled: {capacity_80}")
+
 
 departures = create_departure_data()
 print_departure_board(departures)
 print("")
 print_flight_status(departures)
+print("")
+print_flight_analysis(departures)
